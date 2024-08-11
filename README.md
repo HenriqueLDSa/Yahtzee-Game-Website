@@ -7,7 +7,7 @@ This project is a digital implementation of the classic dice game Yahtzee. It re
 - Five virtual 6-sided dice
 - A digital Yahtzee score card for the player
 
-## Object of the Game
+## Objective of the Game
 
 The goal of Yahtzee is for the player to roll dice and fill out their score card over the course of 13 rounds, trying to obtain the best rolls they can in 13 different scoring combinations.
 
