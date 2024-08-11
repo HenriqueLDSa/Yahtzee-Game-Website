@@ -65,5 +65,4 @@ Contributions to improve the game are welcome. Please feel free to submit a pull
 
 ## License
 
-[Add your chosen license here]
-
+This project is licensed under the MIT License. See the LICENSE file for more details.
