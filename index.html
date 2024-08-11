@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Yahtzee!</title>
+	<link rel="stylesheet" href="css/yahtzee.css">
+</head>
+<body>
+	<div id="site-wrapper">
+		<div id="site-canvas">
+			<div id="scoresheet-menu">
+				<div id="scoreSheet">
+					<table>
+						<thead>
+							<tr>
+								<th>Upper section</th>
+								<th>Score</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Aces</td>
+								<td id="1-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr>
+								<td>Twos</td>
+								<td id="2-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr>
+								<td>Threes</td>
+								<td id="3-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr>
+								<td>Fours</td>
+								<td id="4-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr>
+								<td>Fives</td>
+								<td id="5-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr>
+								<td>Sixes</td>
+								<td id="6-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr id="upper-bonus">
+								<td>Bonus</td>
+								<td id="upper-bonus-score"></td>
+							</tr>
+                            <tr>
+								<th>Lower section</th>
+								<th>Score</th>
+							</tr>
+							<tr>
+								<td>3 of a kind</td>
+								<td id="7-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr>
+								<td>4 of a kind</td>
+								<td id="8-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr>
+								<td>Full House</td>
+								<td id="9-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr>
+								<td>Small Straight</td>
+								<td id="10-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr>
+								<td>Large Straight</td>
+								<td id="11-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr>
+								<td>Yahtzee</td>
+								<td id="12-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+							<tr>
+								<td>Chance</td>
+								<td id="13-score"></td>
+								<td class="speculative-score"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<button id="rollDiceButton">
+				<i class="fa fa-hand-rock-o fa-2x"></i> ROLL
+				<span class="extra-roll-button-text">&nbsp;THE DICE</span>
+			</button>
+
+			<div id="round-number-wrapper">
+				<span id="round-number" class="round-number">1</span><span class="round-number-separator"></span><span class="total-rounds">13</span>
+			</div>
+
+			<h1 id="logo">Yahtzee!</h1>
+
+			<h1 id="scoreMessage">Game over!<br>Your total score is <span class="score-total"><i class="fa fa-trophy"></i> <span id="finalScore"></span></span></h1>
+
+			<div id="diceArea"></div>
+
+			<div id="selectedDiceArea"></div>
+		</div>
+	</div>
+
+    <script src="js/game.js"></script>
+    <script src="js/scoring.js"></script>
+</body>
+</html>
