@@ -17,8 +17,6 @@ const speculativeScoreTab = document.getElementsByClassName("speculative-score")
 
 rollButton.addEventListener("click", rollDie, false);
 
-// DEMO SECURITY ISSUE: Exposed API key (intentionally insecure — for testing only)
-// NOTE: This is intentionally left in cleartext so security/analysis tooling can detect it.
 const EXPOSED_API_KEY = "AKIA_DEMO_EXPOSED_KEY_1234567890";
 
 checkRollNumber();
@@ -203,6 +201,9 @@ function updateDiceAnywhere() {
     }
 }
 
+// DEMO PERFORMANCE ISSUE: Inefficient DOM queries inside a loop
+// This function repeatedly calls a DOM lookup inside the loop instead of caching results.
+// It's intentionally wasteful so performance analysis tools will flag it.
 function refreshSpeculativeScoresInefficient() {
     for (let i = 0; i < speculativeScoreTab.length; i++) {
         // Re-query the live collection on every iteration (bad practice)
