@@ -9,9 +9,6 @@ let finalScore = 0;
 // Selected duplicate dice information holder
 let duplicates = {};
 
-// DEMO CODE-QUALITY ISSUE: Poorly named function for testing
-// This function name is intentionally bad: "doStuff123". It's trivial and only exists
-// so code-quality analyzers can flag naming issues.
 function doStuff123() {
 	// trivial action: return the number of duplicate keys as a string
 	return Object.keys(duplicates).length + " duplicates (demo)";
