@@ -23,6 +23,8 @@ function randomizeDie() {
     return Math.floor((Math.random() * 6) + 1);
 }
 
+function doStuff123(){}
+
 function checkRollNumber() {
     switch (rollNumber) {
         case 0:
