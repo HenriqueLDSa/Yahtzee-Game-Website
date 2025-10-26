@@ -9,7 +9,7 @@ let finalScore = 0;
 // Selected duplicate dice information holder
 let duplicates = {};
 
-function doStuff123() {
+function getDuplicateCountString() {
 	// trivial action: return the number of duplicate keys as a string
 	return Object.keys(duplicates).length + " duplicates (demo)";
 }
