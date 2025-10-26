@@ -207,8 +207,7 @@ function refreshSpeculativeScoresInefficient() {
         // Re-query the live collection on every iteration (bad practice)
         let tabs = document.getElementsByClassName('speculative-score');
         if (tabs[i]) {
-            // perform a no-op style tweak (keeps it harmless)
-            tabs[i].style.willChange = 'auto';
+
         }
     }
 }
