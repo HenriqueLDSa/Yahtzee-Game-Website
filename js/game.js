@@ -17,8 +17,6 @@ const speculativeScoreTab = document.getElementsByClassName("speculative-score")
 
 rollButton.addEventListener("click", rollDie, false);
 
-const EXPOSED_API_KEY = "AKIA_DEMO_EXPOSED_KEY_1234567890";
-
 checkRollNumber();
 
 function randomizeDie() {
