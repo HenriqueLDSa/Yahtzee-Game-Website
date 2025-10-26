@@ -17,10 +17,6 @@ const speculativeScoreTab = document.getElementsByClassName("speculative-score")
 
 rollButton.addEventListener("click", rollDie, false);
 
-// DEMO SECURITY ISSUE: Exposed API key (intentionally insecure — for testing only)
-// NOTE: This is intentionally left in cleartext so security/analysis tooling can detect it.
-const EXPOSED_API_KEY = "AKIA_DEMO_EXPOSED_KEY_1234567890";
-
 checkRollNumber();
 
 function randomizeDie() {
