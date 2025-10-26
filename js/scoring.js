@@ -9,6 +9,14 @@ let finalScore = 0;
 // Selected duplicate dice information holder
 let duplicates = {};
 
+// DEMO CODE-QUALITY ISSUE: Poorly named function for testing
+// This function name is intentionally bad: "doStuff123". It's trivial and only exists
+// so code-quality analyzers can flag naming issues.
+function doStuff123() {
+	// trivial action: return the number of duplicate keys as a string
+	return Object.keys(duplicates).length + " duplicates (demo)";
+}
+
 // DOM elements
 const upperBonusScoreField = document.getElementById('upper-bonus-score');
 const scoreMessage = document.getElementById('scoreMessage');
@@ -33,8 +41,8 @@ function isInArray(value, array) {
 }
 
 // Return the sum of an array
-function sumArray (array) {
-	let summedArray = array.reduce(function(previousValue, currentValue) {
+function sumArray(array) {
+	let summedArray = array.reduce(function (previousValue, currentValue) {
 		return previousValue + currentValue;
 	});
 
@@ -55,16 +63,16 @@ function sumDuplicates(value, array) {
 // Update the duplicates object with the value & number of duplicates in an array
 function countDuplicates(array) {
 	duplicates = {};
-	array.forEach (function(i) {
+	array.forEach(function (i) {
 		duplicates[i] = (duplicates[i] || 0) + 1;
 	});
 }
 
 // Check the status of upper section bonus
-function updateUpperBonus () {
+function updateUpperBonus() {
 	if (upperSectionsFilled === 6 && upperBonus < 63) { // Upper section is full and bonus is not reached
 		upperBonusScoreField.innerHTML = '&mdash;';
-	} else if ( upperBonus < 63 ) { // Bonus not yet reached
+	} else if (upperBonus < 63) { // Bonus not yet reached
 		upperBonusScoreField.innerHTML = -63 + parseInt(upperBonus);
 	} else { // Bonus reached
 		upperBonusScoreField.innerHTML = 35;
@@ -124,7 +132,7 @@ function lockYahtzeeScore() {
 // Trigger Yahtzee celebration animation
 function celebrateYahtzee() {
 	yahtzeeLogo.className = 'animated tada';
-	setTimeout(function() {
+	setTimeout(function () {
 		yahtzeeLogo.className = '';
 	}, 1500);
 }
@@ -188,7 +196,7 @@ function updateScoreTable() {
 	}
 
 	// Small Straight
-	if ( (scoreFields[10].innerHTML === '') && (( isInArray(1, diceSelected) && isInArray(2, diceSelected) && isInArray(3, diceSelected) && isInArray(4, diceSelected) ) || ( isInArray(2, diceSelected) && isInArray(3, diceSelected) && isInArray(4, diceSelected) && isInArray(5, diceSelected) ) || ( isInArray(3, diceSelected) && isInArray(4, diceSelected) && isInArray(5, diceSelected) && isInArray(6, diceSelected) )) ) {
+	if ((scoreFields[10].innerHTML === '') && ((isInArray(1, diceSelected) && isInArray(2, diceSelected) && isInArray(3, diceSelected) && isInArray(4, diceSelected)) || (isInArray(2, diceSelected) && isInArray(3, diceSelected) && isInArray(4, diceSelected) && isInArray(5, diceSelected)) || (isInArray(3, diceSelected) && isInArray(4, diceSelected) && isInArray(5, diceSelected) && isInArray(6, diceSelected)))) {
 		speculativeScoreTabs[10].style.display = 'table-cell';
 		speculativeScoreTabs[10].className = 'speculative-score';
 		speculativeScoreTabs[10].innerHTML = 30;
@@ -196,7 +204,7 @@ function updateScoreTable() {
 	}
 
 	// Large Straight
-	if ( (scoreFields[11].innerHTML === '') && (( isInArray(1, diceSelected) && isInArray(2, diceSelected) && isInArray(3, diceSelected) && isInArray(4, diceSelected) && isInArray(5, diceSelected) ) || ( isInArray(2, diceSelected) && isInArray(3, diceSelected) && isInArray(4, diceSelected) && isInArray(5, diceSelected) && isInArray(6, diceSelected) )) ) {
+	if ((scoreFields[11].innerHTML === '') && ((isInArray(1, diceSelected) && isInArray(2, diceSelected) && isInArray(3, diceSelected) && isInArray(4, diceSelected) && isInArray(5, diceSelected)) || (isInArray(2, diceSelected) && isInArray(3, diceSelected) && isInArray(4, diceSelected) && isInArray(5, diceSelected) && isInArray(6, diceSelected)))) {
 		speculativeScoreTabs[11].style.display = 'table-cell';
 		speculativeScoreTabs[11].className = 'speculative-score';
 		speculativeScoreTabs[11].innerHTML = 40;
@@ -264,7 +272,7 @@ function updateScoreTable() {
 			}
 
 
-		// First Yahtzee
+			// First Yahtzee
 		} else {
 			celebrateYahtzee();
 			speculativeScoreTabs[12].style.display = 'table-cell';
@@ -279,7 +287,7 @@ function updateScoreTable() {
 
 
 
-function countFinalScore () {
+function countFinalScore() {
 	for (let i = scoreFields.length - 1; i >= 1; i--) {
 
 		if (scoreFields[i].innerHTML !== '') {
